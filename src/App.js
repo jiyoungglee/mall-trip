@@ -1,23 +1,19 @@
-import logo from './logo.svg';
 import './App.css';
+import Directory from './Components/Directory';
+import { useState } from 'react';
+import RouteMap from './Components/RouteMap';
 
 function App() {
+  const [destinations, setDestinations] = useState([]);
+
+  function addDestination(selectedShop) {
+    setDestinations((destinations) => [...destinations, selectedShop]);
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Directory onAdd={addDestination} />
+      <RouteMap selectedShops={destinations} />
     </div>
   );
 }
