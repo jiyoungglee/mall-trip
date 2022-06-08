@@ -1,12 +1,15 @@
-function ShopList({ searchQuery, onClick }) {
+import Button from "./Button";
 
+function ShopList({ searchQuery, modifyRoute }) {
   function renderShops() {
-    return searchQuery.map((shop) =>
-      <li>
-        {shop}
-        <button onClick={()=> onClick(shop)}>Add</button>
-      </li>
-    )
+    if (searchQuery.length === 0) return "No matching results"
+    else {
+      return searchQuery.map((shop) =>
+        <li key={shop.location}>
+          {shop.name}
+          <Button shop={shop} modifyRoute={modifyRoute} />
+        </li>
+    )}
   }
 
   return (

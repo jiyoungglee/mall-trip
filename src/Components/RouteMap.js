@@ -4,12 +4,13 @@ function RouteMap({ selectedShops }) {
       Selected Route
       <ol>
         {selectedShops.map((shop) =>
-          <li>{shop}</li>
+          <li key={shop.location}>
+            {shop.name}
+          </li>
         )}
       </ol>
     </div>
   )
-
 }
 
 export default RouteMap;
