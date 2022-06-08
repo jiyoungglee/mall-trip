@@ -1,4 +1,7 @@
+import '../Styles/Button.css'
 import { useState } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCircleMinus, faCirclePlus } from '@fortawesome/free-solid-svg-icons'
 
 function Button({ shop, modifyRoute }) {
   const [destAdded, setDestAdded] = useState(false);
@@ -9,7 +12,9 @@ function Button({ shop, modifyRoute }) {
   }
 
   return (
-    <button onClick={()=> onClick(shop)}>{destAdded ? "Remove from Route" : "Add to Route"}</button>
+    <button onClick={()=> onClick(shop)}>
+      {destAdded ? <FontAwesomeIcon icon={faCircleMinus} size="2x" /> : <FontAwesomeIcon icon={faCirclePlus} size="2x" />}
+    </button>
   )
 }
 

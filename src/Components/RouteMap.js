@@ -1,7 +1,8 @@
+import '../Styles/RouteMap.css'
 function RouteMap({ selectedShops }) {
   return(
     <div>
-      Selected Route
+      <h1>Selected Route</h1>
       <ol>
         {selectedShops.map((shop) =>
           <li key={shop.location}>

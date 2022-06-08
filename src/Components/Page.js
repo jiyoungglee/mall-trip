@@ -1,3 +1,4 @@
+import '../Styles/Page.css'
 import Directory from './Directory';
 import { useState } from 'react';
 import RouteMap from './RouteMap';
@@ -8,6 +9,15 @@ function Page() {
     {location:'B2', name: 'Louis Vuitton'},
     {location:'C12', name: 'Abercrombie Kids'},
     {location:'D34', name: 'Abercrombie & Fitch'},
+    {location:'L23', name: 'AGAINST ALL ODDS'},
+    {location:'B3', name: 'Saks Fifth Avenue'},
+    {location:'F16', name: 'Urban Outfitters'},
+    {location:'G4', name: 'Foot Locker'},
+    {location:'A15', name: 'Tiffany & Co.'},
+    {location:'D230', name: 'Swarovski'},
+    {location:'C22', name: 'Tesla Motors'},
+    {location:'G15', name: 'Venus Et Fleur'},
+    {location:'J20', name: 'Apple'},
   ];
   const [destinations, setDestinations] = useState([]);
 
@@ -19,7 +29,7 @@ function Page() {
   }
 
   return (
-    <div>
+    <div className="page">
       <Directory shops={shops} modifyRoute={modifyRoute} />
       <RouteMap selectedShops={destinations} />
     </div>
