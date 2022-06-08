@@ -1,10 +1,7 @@
-import { useState, useEffect } from 'react';
-
-function ShopList({ directory, searchQuery, onClick }) {
-  const [list, setList] = useState(directory)
+function ShopList({ searchQuery, onClick }) {
 
   function renderShops() {
-    return list.map((shop) =>
+    return searchQuery.map((shop) =>
       <li>
         {shop}
         <button onClick={()=> onClick(shop)}>Add</button>
@@ -14,7 +11,7 @@ function ShopList({ directory, searchQuery, onClick }) {
 
   return (
     <ul>
-      {renderShops(list)}
+      {renderShops()}
     </ul>
   );
 }
