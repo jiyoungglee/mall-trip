@@ -12,7 +12,7 @@ function Button({ shop, modifyRoute }) {
   }
 
   return (
-    <button onClick={()=> onClick(shop)}>
+    <button className="add-button" onClick={()=> onClick(shop)}>
       {destAdded ? <FontAwesomeIcon icon={faCircleMinus} size="2x" /> : <FontAwesomeIcon icon={faCirclePlus} size="2x" />}
     </button>
   )

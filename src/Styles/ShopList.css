@@ -17,6 +17,7 @@
 .shop{
   display: flex;
   flex-direction: column;
+  margin-left: 12px;
 }
 
 .shopName{
@@ -27,3 +28,19 @@
 .shopLocation {
   font-size: 15px;
 }
+
+.checklist-left {
+  display: flex;
+  align-items: center;
+}
+
+.checklist-left input{
+  cursor: pointer;
+  -ms-transform: scale(2); /* IE */
+  -moz-transform: scale(2); /* FF */
+  -webkit-transform: scale(2); /* Safari and Chrome */
+  -o-transform: scale(2); /* Opera */
+  transform: scale(2);
+  padding: 10px;
+}
+

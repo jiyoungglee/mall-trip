@@ -19,7 +19,7 @@ function Directory({ shops, modifyRoute }) {
         <h1>Directory</h1>
         <div className="searchbox">
           <FontAwesomeIcon icon={faMagnifyingGlass} />
-          <input type="search" onChange={searchHandler} />
+          <input type="search" onChange={searchHandler} placeholder="Search for..." />
         </div>
       </div>
       <ShopList searchQuery={filteredList} modifyRoute={modifyRoute} />
