@@ -1,9 +1,9 @@
 import '../Styles/Page.css'
-import Directory from './Directory';
+import Directory from '../Components/Directory';
 import { useState } from 'react';
-import RouteMap from './RouteMap';
+import RouteMap from '../Components/RouteMap';
 
-function Page() {
+function DirectoryMapPage() {
   const shops = [
     {location:'A1', name: 'Gucci'}, 
     {location:'B2', name: 'Louis Vuitton'},
@@ -36,4 +36,4 @@ function Page() {
   );
 }
 
-export default Page;
+export default DirectoryMapPage;

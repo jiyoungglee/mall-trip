@@ -1,10 +1,15 @@
+import { Routes, Route } from "react-router-dom";
 import './App.css';
-import Page from './Components/Page';
+import DirectoryMapPage from './Pages/DirectoryMapPage';
+import MallPage from "./Pages/MallPage";
 
 function App() {
   return (
     <div>
-      <Page />
+      <Routes>
+        <Route path="/" element={<MallPage />} />
+        <Route path="stores/:mallName" element={<DirectoryMapPage />} />
+      </Routes>
     </div>
   );
 }
