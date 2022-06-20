@@ -1,0 +1,24 @@
+.mall-list {
+  display: flex;
+  flex-wrap:wrap;
+  justify-content: space-evenly;
+}
+
+.mall-card {
+  border:none;
+  border-radius: 8px;
+  margin: 2px 5px;
+  width: 100%;
+  height: 50px;
+}
+
+.mall-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: left;
+}
+
+.mall-name {
+  font-weight: bold;
+}

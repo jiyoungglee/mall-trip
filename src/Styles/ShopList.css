@@ -1,4 +1,4 @@
-.directory {
+.shop-list {
   list-style: none;
   margin: 0;
   padding: 0;
@@ -6,7 +6,7 @@
   overflow-y: scroll;
 }
 
-.directory li{
+.shop-list li{
   display:flex;
   justify-content: space-between;
   margin: 0px;
@@ -20,12 +20,12 @@
   margin-left: 12px;
 }
 
-.shopName{
+.shop-name{
   font-size: 25px;
   font-weight: bold;
 }
 
-.shopLocation {
+.shop-location {
   font-size: 15px;
 }
 

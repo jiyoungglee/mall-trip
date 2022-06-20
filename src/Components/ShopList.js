@@ -10,8 +10,8 @@ function ShopList({ searchQuery, modifyRoute }) {
           <div className="checklist-left">
             <input type="checkbox" onClick={() => modifyRoute(shop)}/>
             <div className="shop">
-              <span className="shopName">{shop.name}</span>
-              <span className="shopLocation">{shop.location}</span>
+              <span className="shop-name">{shop.name}</span>
+              <span className="shop-location">{shop.location}</span>
             </div>
           </div>
           <Button shop={shop} modifyRoute={modifyRoute} />
@@ -20,7 +20,7 @@ function ShopList({ searchQuery, modifyRoute }) {
   }
 
   return (
-    <ul className="directory">
+    <ul className="shop-list">
       {renderShops()}
     </ul>
   );

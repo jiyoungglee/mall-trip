@@ -10,26 +10,3 @@
   color: white;
   text-align: center;
 }
-
-
-.searchbox {
-  display: flex;
-  margin: 12px;
-  padding: 5px;
-  justify-content: space-around;
-  align-items: center;
-  background: white;
-  color: black;
-}
-
-.searchbox input {
-  padding: 5px;
-  border: none;
-  width: 90%;
-  font-size: 25px;
-  background: transparent;
-}
-
-.searchbox input:focus {
-  outline: none;
-}
