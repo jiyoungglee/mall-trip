@@ -64,8 +64,10 @@ function MallPage() {
 
   return(
     <div className="mall-page">
-      <h1>Select a Mall</h1>
-      <Search onChange={searchHandler} page="mall" />
+      <div className="mall-page-top">
+        <h1>Select a Mall</h1>
+        <Search onChange={searchHandler} page="mall" />
+      </div>
       <MallList searchQuery={filteredMalls} />
     </div>
   )

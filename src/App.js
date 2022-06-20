@@ -1,5 +1,4 @@
 import { Routes, Route } from "react-router-dom";
-import './App.css';
 import DirectoryMapPage from './Pages/DirectoryMapPage';
 import MallPage from "./Pages/MallPage";
 
