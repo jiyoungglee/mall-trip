@@ -1,5 +1,4 @@
 import '../Styles/ShopList.css'
-import Button from "./Button";
 
 function ShopList({ searchQuery, modifyRoute }) {
   function renderShops() {
@@ -14,7 +13,6 @@ function ShopList({ searchQuery, modifyRoute }) {
               <span className="shop-location">{shop.location}</span>
             </div>
           </div>
-          <Button shop={shop} modifyRoute={modifyRoute} />
         </li>
     )}
   }

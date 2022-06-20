@@ -1,7 +1,12 @@
-import '../Styles/Page.css'
-import Directory from '../Components/Directory';
 import { useState } from 'react';
+import { Link } from "react-router-dom";
+import { faBars, faHouse } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import Directory from '../Components/Directory';
 import RouteMap from '../Components/RouteMap';
+import '../Styles/DirectoryMapPage.css';
+
+
 
 function DirectoryMapPage() {
   const shops = [
@@ -19,7 +24,12 @@ function DirectoryMapPage() {
     {location:'G15', name: 'Venus Et Fleur'},
     {location:'J20', name: 'Apple'},
   ];
-  const [destinations, setDestinations] = useState([]);
+  const [directoryOpen, setDirectoryOpen] = useState(false);
+  const [destinations, setDestinations] = useState([{location:'test1', name: 'test1'},{location:'test2', name: 'test2'}]);
+
+  function toggleDirectory() {
+    setDirectoryOpen((directoryOpen) => !directoryOpen);
+  }
 
   function modifyRoute(selectedShop) {
     if (destinations.some((destination) => destination.location === selectedShop.location)) {
@@ -29,8 +39,16 @@ function DirectoryMapPage() {
   }
 
   return (
-    <div className="page">
-      <Directory shops={shops} modifyRoute={modifyRoute} />
+    <div>
+      {directoryOpen && <Directory shops={shops} modifyRoute={modifyRoute} onClose={toggleDirectory} />}
+      <div className="route-page-header">
+        <div className="icon-container">
+          <button onClick={toggleDirectory}>
+            <FontAwesomeIcon className="" icon={faBars} inverse />
+          </button>
+          <Link to="/"><FontAwesomeIcon className="" icon={faHouse} inverse /></Link>
+        </div>
+      </div>
       <RouteMap selectedShops={destinations} />
     </div>
   );

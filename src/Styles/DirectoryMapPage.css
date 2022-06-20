@@ -1,0 +1,17 @@
+.route-page-header {
+  background-color: maroon;
+  padding: 20px;
+  margin-bottom: 10px;
+}
+
+.icon-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.icon-container button{
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  margin: 0;
+}

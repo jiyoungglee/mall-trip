@@ -1,12 +1,33 @@
 .directory-page{
+  position: absolute;
   display: flex;
   flex-direction: column;
-  width: 25%;
+  width: 80%;
   height: 100vh;
+  background-color: white;
+  z-index: 1;
 }
 
 .directory-top {
   background-color: maroon;
   color: white;
   text-align: center;
+}
+
+.backdrop{
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.26);
+  width: 20%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+}
+
+.backdrop button{
+  background-color: transparent;
+  border: none;
+  margin: 10px;
 }

@@ -1,40 +1,16 @@
-.selected-route {
-  display: flex;
-  border: solid 1px black;
-  border-radius: 5px;
-  flex-direction: column;
-  width: 40%;
-  align-items: center;
-  height: fit-content;
-}
-
 .selected-route h1 {
   margin: 0px 0px 10px 0px;
-  background-color: maroon;
   width: 100%;
-  color: white;
   text-align: center;
   padding: 20px 0px;
 }
 
-.selected-route button {
-  border-radius: 8px;
-  align-self: flex-end;
-  background-color: maroon;
-  color: white;
-  font: 18px sans-serif;
-  margin: 10px;
-  padding: 10px 20px;
-  cursor: pointer;
-}
-
-.shopping-route {
+.route-body {
   display: flex;
   flex-direction: column;
-  width: 100%;
 }
 
-.route-item{
+.selection-container{
   display: flex;
   align-items: center;
   padding: 0px 20px;
@@ -58,11 +34,22 @@
   position: relative;
 }
 
-.selected-shop {
+.selection {
   border: solid 1px black;
   border-radius: 8px;
   padding: 10px 5px;
   margin: 10px;
   text-align: center;
   width: 100%;
+}
+
+.selected-route button {
+  border-radius: 8px;
+  align-self: flex-end;
+  background-color: maroon;
+  color: white;
+  font: 18px sans-serif;
+  margin: 10px;
+  padding: 10px 20px;
+  cursor: pointer;
 }

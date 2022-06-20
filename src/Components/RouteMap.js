@@ -6,12 +6,12 @@ function RouteMap({ selectedShops }) {
 
   function renderRoute() {
     return (selectedShops.map((shop, i) =>
-        <div key={shop.location} className="route-item">
+        <div key={shop.location} className="selection-container">
           <div className="map-icon">
             {(i>0) && <div className="ellipsis"></div>}
             <FontAwesomeIcon className="bullet" icon={faCircle} />
           </div>
-          <span className="selected-shop">
+          <span className="selection">
             {shop.name}
           </span>
         </div>
@@ -21,10 +21,10 @@ function RouteMap({ selectedShops }) {
   return(
     <div className="selected-route">
       <h1>Selected Route</h1>
-      <div className="shopping-route">
+      <div className="route-body">
         {renderRoute()}
+        <button>Get Directions</button>
       </div>
-      <button>Get Directions</button>
     </div>
   )
 }
