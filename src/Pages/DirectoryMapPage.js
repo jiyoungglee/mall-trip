@@ -25,7 +25,7 @@ function DirectoryMapPage() {
     {location:'J20', name: 'Apple'},
   ];
   const [directoryOpen, setDirectoryOpen] = useState(false);
-  const [destinations, setDestinations] = useState([{location:'test1', name: 'test1'},{location:'test2', name: 'test2'}]);
+  const [destinations, setDestinations] = useState([]);
 
   function toggleDirectory() {
     setDirectoryOpen((directoryOpen) => !directoryOpen);
@@ -40,13 +40,13 @@ function DirectoryMapPage() {
 
   return (
     <div>
-      {directoryOpen && <Directory shops={shops} modifyRoute={modifyRoute} onClose={toggleDirectory} />}
+      <Directory open={directoryOpen} shops={shops} modifyRoute={modifyRoute} onClose={toggleDirectory} />
       <div className="route-page-header">
         <div className="icon-container">
           <button onClick={toggleDirectory}>
-            <FontAwesomeIcon className="" icon={faBars} inverse />
+            <FontAwesomeIcon icon={faBars} inverse />
           </button>
-          <Link to="/"><FontAwesomeIcon className="" icon={faHouse} inverse /></Link>
+          <Link to="/"><FontAwesomeIcon icon={faHouse} inverse /></Link>
         </div>
       </div>
       <RouteMap selectedShops={destinations} />

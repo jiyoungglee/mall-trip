@@ -5,15 +5,17 @@ function ShopList({ searchQuery, modifyRoute }) {
     if (searchQuery.length === 0) return "No matching results"
     else {
       return searchQuery.map((shop) =>
-        <li key={shop.location}>
-          <div className="checklist-left">
-            <input type="checkbox" onClick={() => modifyRoute(shop)}/>
-            <div className="shop">
-              <span className="shop-name">{shop.name}</span>
-              <span className="shop-location">{shop.location}</span>
+        <label key={shop.location}>
+          <li>
+            <div className="checklist-left">
+              <input type="checkbox" onClick={() => modifyRoute(shop)}/>
+              <div className="shop">
+                <span className="shop-name">{shop.name}</span>
+                <span className="shop-location">{shop.location}</span>
+              </div>
             </div>
-          </div>
-        </li>
+          </li>
+        </label>
     )}
   }
 
