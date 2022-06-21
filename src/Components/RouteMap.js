@@ -23,7 +23,9 @@ function RouteMap({ selectedShops }) {
       <h1>Selected Route</h1>
       <div className="route-body">
         {renderRoute()}
-        <button>Get Directions</button>
+        <div className="get-directions">
+          <button>Get Directions</button>
+        </div>
       </div>
     </div>
   )

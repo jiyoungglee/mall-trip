@@ -40,7 +40,6 @@ function DirectoryMapPage() {
 
   return (
     <div>
-      <Directory open={directoryOpen} shops={shops} modifyRoute={modifyRoute} onClose={toggleDirectory} />
       <div className="route-page-header">
         <div className="icon-container">
           <button onClick={toggleDirectory}>
@@ -49,6 +48,7 @@ function DirectoryMapPage() {
           <Link to="/"><FontAwesomeIcon icon={faHouse} inverse /></Link>
         </div>
       </div>
+      <Directory open={directoryOpen} shops={shops} modifyRoute={modifyRoute} onClose={toggleDirectory} />
       <RouteMap selectedShops={destinations} />
     </div>
   );
