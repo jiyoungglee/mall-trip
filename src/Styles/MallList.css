@@ -27,12 +27,8 @@
 
 @media only screen and (min-width: 768px) {
   /* For desktop: */
-  .mall-list-outer {
-    display: flex;
-    flex-wrap: wrap;
-  }
   .mall-card {
-    width: 20vw;
+    width: 193px;
     height: 25vh;
     padding: 0;
     background: none;

@@ -11,9 +11,9 @@
 }
 
 .searchbox.mall {
-  border: solid 1px black;
   border-radius: 30em;
   margin: 40px 10px 10px;
+  box-shadow: 0 1px 6px 0 rgba(0,0,0,0.2);
 }
 
 .searchbox input {
@@ -26,4 +26,8 @@
 
 .searchbox input:focus {
   outline: none;
+}
+
+.search-icon {
+  margin: 0px 10px;
 }
