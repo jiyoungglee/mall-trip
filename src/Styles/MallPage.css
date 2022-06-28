@@ -1,13 +1,24 @@
+/* .mall-page-header {
+  display: flex;
+  border-bottom: 1px solid #ccc;
+  padding: 20px;
+  align-items: center;
+} */
+
+/* .mobile-heading{
+  font-weight: bold;
+  font-size:20px;
+  margin-left: 20px;
+} */
+
 .mall-page-top {
-  background-color: maroon;
   padding: 20px;
   margin-bottom: 10px;
   text-align: center;
 }
 
 .mall-page h1 {
-  margin: 0px;
-  color: white;
+  display: none;
 }
 
 @media only screen and (min-width: 768px) {
@@ -15,12 +26,14 @@
     max-width:768px;
     margin: auto;
   }
-  .mall-page-top {
-    background: none;
-    margin: 100px 0px 10px;
-  }
   .mall-page h1 {
-    color: black;
+    display: block;
     font-size: 60px;
   }
+  /* .mobile-heading{
+    display: none;
+  }
+  .mall-page-header {
+    justify-content: center;
+  } */
 }

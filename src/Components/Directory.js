@@ -15,12 +15,10 @@ function Directory({ shops, modifyRoute, onClose, open }) {
   const filteredShops = shops.filter(({ name }) => name.toLowerCase().includes(searchValue.toLowerCase()));
 
   return (
-    <div className= {!open ? "hidden" : ""}>
+    <div className= {open ? "" : "hidden"}>
       <div className="directory-page">
-        <div className="directory-top">
-          <h1>Directory</h1>
-          <Search onChange={searchHandler} page="directory"/>
-        </div>
+        <h1>Directory</h1>
+        <Search onChange={searchHandler} page="directory"/>
         <ShopList setSearchValue={setSearchValue} searchQuery={filteredShops} modifyRoute={modifyRoute} />
       </div>
       <div className="backdrop">

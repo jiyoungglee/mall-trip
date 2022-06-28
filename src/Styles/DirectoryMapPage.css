@@ -1,21 +1,24 @@
-.route-page-header {
-  background-color: maroon;
-  padding: 20px;
-  margin-bottom: 10px;
-}
-
-.icon-container {
+.route-page {
   display: flex;
-  justify-content: space-between;
-}
-
-.icon-container button{
-  background-color: transparent;
-  border: none;
-  padding: 0;
-  margin: 0;
 }
 
 button {
   cursor: pointer;
+}
+
+.stores-button {
+  position: fixed;
+  top: 73px;
+  z-index: 1;
+  margin: 10px;
+  font-size: 15px;
+}
+
+@media only screen and (min-width: 768px) {
+  .route-page-right{
+    flex-grow: 1;
+  }
+  .stores-button {
+    display: none;
+  }
 }

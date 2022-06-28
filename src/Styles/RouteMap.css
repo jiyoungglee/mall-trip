@@ -1,13 +1,25 @@
+.selected-route {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  overflow-y: scroll;
+  height: calc(100vh - 73px);
+  align-items: center;
+}
+
 .selected-route h1 {
   margin: 0px 0px 10px 0px;
   width: 100%;
   text-align: center;
   padding: 20px 0px;
 }
+.default-text{
+  text-align: center;
+}
+
 
 .route-body {
-  display: flex;
-  flex-direction: column;
+  width: 100%
 }
 
 .selection-container{
@@ -52,18 +64,21 @@
 
 .get-directions button {
   border-radius: 8px;
-  background-color: maroon;
+  background-color: black;
   color: white;
   font: 18px sans-serif;
   padding: 10px 20px;
-  cursor: pointer;
-  margin-left: 16px;
 }
+
 
 @media only screen and (min-width: 768px) {
   .selected-route{
-    width: 75vw;
-    float:right;
-    padding: 0px 60px;
+    width: auto;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .selected-route{
+    width: calc(100vw - 480px);
   }
 }

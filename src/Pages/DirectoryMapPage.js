@@ -1,12 +1,7 @@
 import { useState } from 'react';
-import { Link } from "react-router-dom";
-import { faBars, faHouse } from '@fortawesome/free-solid-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Directory from '../Components/Directory';
 import RouteMap from '../Components/RouteMap';
 import '../Styles/DirectoryMapPage.css';
-
-
 
 function DirectoryMapPage() {
   const shops = [
@@ -23,6 +18,11 @@ function DirectoryMapPage() {
     {location:'C22', name: 'Tesla Motors'},
     {location:'G15', name: 'Venus Et Fleur'},
     {location:'J20', name: 'Apple'},
+    {location:'q20', name: 'Apple'},
+    {location:'w20', name: 'Apple'},
+    {location:'s20', name: 'Apple'},
+    {location:'Jd20', name: 'Apple'},
+    {location:'Js20', name: 'Apple'},
   ];
   const [directoryOpen, setDirectoryOpen] = useState(false);
   const [destinations, setDestinations] = useState([]);
@@ -39,18 +39,13 @@ function DirectoryMapPage() {
   }
 
   return (
-    <div>
-      <div className="route-page-header">
-        <div className="icon-container">
-          <button onClick={toggleDirectory}>
-            <FontAwesomeIcon icon={faBars} inverse />
-          </button>
-          <Link to="/"><FontAwesomeIcon icon={faHouse} inverse /></Link>
+      <div className="route-page">
+        <Directory open={directoryOpen} shops={shops} modifyRoute={modifyRoute} onClose={toggleDirectory} />
+        <div className="route-page-right">
+          {!directoryOpen && <button className="stores-button" onClick={toggleDirectory}>Stores</button>}
+          <RouteMap selectedShops={destinations} />
         </div>
       </div>
-      <Directory open={directoryOpen} shops={shops} modifyRoute={modifyRoute} onClose={toggleDirectory} />
-      <RouteMap selectedShops={destinations} />
-    </div>
   );
 }
 

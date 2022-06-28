@@ -22,6 +22,8 @@ function RouteMap({ selectedShops }) {
     <div className="selected-route">
       <h1>Selected Route</h1>
       <div className="route-body">
+        {selectedShops.length === 0 && 
+        <div className="default-text">Please select a store</div>}
         {renderRoute()}
         <div className="get-directions">
           <button>Get Directions</button>

@@ -2,7 +2,6 @@
   list-style: none;
   margin: 0;
   padding: 0;
-  font-size: 30px;
   overflow-y: scroll;
 }
 
@@ -22,12 +21,12 @@
 }
 
 .shop-name{
-  font-size: 25px;
+  font-size: 16px;
   font-weight: bold;
 }
 
 .shop-location {
-  font-size: 15px;
+  font-size: 12px;
 }
 
 .checklist-left {
@@ -37,11 +36,8 @@
 
 .checklist-left input{
   cursor: pointer;
-  -ms-transform: scale(2); /* IE */
-  -moz-transform: scale(2); /* FF */
-  -webkit-transform: scale(2); /* Safari and Chrome */
-  -o-transform: scale(2); /* Opera */
   transform: scale(2);
   padding: 10px;
+  border-radius: 10px;
 }
 

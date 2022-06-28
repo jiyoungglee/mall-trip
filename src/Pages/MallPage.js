@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import MallList from '../Components/MallList';
 import Search from '../Components/Search';
-import '../Styles/MallPage.css'
+import '../Styles/MallPage.css';
 
 function MallPage() {
   const malls = [
@@ -63,12 +63,14 @@ function MallPage() {
   const filteredMalls = malls.filter(({ name }) => name.toLowerCase().includes(searchValue.toLowerCase()));
 
   return(
-    <div className="mall-page">
-      <div className="mall-page-top">
-        <h1>Select a Mall</h1>
-        <Search onChange={searchHandler} page="mall" />
+    <div>
+      <div className="mall-page">
+        <div className="mall-page-top">
+          <h1>Select a Mall</h1>
+          <Search onChange={searchHandler} page="mall" />
+        </div>
+        <MallList searchQuery={filteredMalls} />
       </div>
-      <MallList searchQuery={filteredMalls} />
     </div>
   )
 }
